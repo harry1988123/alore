@@ -1,0 +1,147 @@
+@import "../../../vars";
+.main-content-container{
+    display: flex;
+    width: 100%;
+    height: 100%; 
+    padding: 0.5rem;
+    .left-panel{
+        width: 24%;
+        height: 100%;
+        background-color: #d4cfcf;
+        display: block;
+        .header-title{
+            text-align: center;
+            color: black;
+            font-size: 1rem;
+            padding-top: 1rem;
+        }
+        .search-container{
+            padding: 1rem;
+        }
+        .segment-section{
+            padding: 1rem;
+            display: block;
+            .list-item{
+                display: flex;
+                padding: 0.5rem 0.5rem 0.5rem 0rem;
+                .icon{
+                    padding-right: 0.2rem;
+                }
+            }
+        }
+        .footer{
+            position: absolute;
+            bottom: 1rem;
+            width: 19%; 
+            height: 5%;
+            background-color: #344cfc;
+            border-radius: 5rem;
+            cursor: pointer;
+            @include align-v-h-center();
+            .add-segment{ 
+                display: flex;
+                .plus-icon{
+                    background-image: url("../../assets/images/white-24dp/1x/outline_add_white_24dp.png");
+                    @include image-contain();
+                    width: 1rem;
+                }
+                .title{
+                    color: white;
+                }
+            }
+        }
+    }
+    .body{
+        width: 100%;
+        padding: 5rem; 
+        .segment-container{
+            display: block;
+            .segment1{
+                .segment-header{
+                    display: flex;
+                    width: 16rem;
+                    height: 2rem;
+                    align-items: center;
+                    padding-bottom: 1rem;
+                    .icon{
+                        width: 1rem;
+                        height: 1rem; 
+                        cursor: pointer;
+                        @include image-contain();
+                    }
+                    .dropdown-icon{
+                        width: 1rem;
+                        height: 1rem;
+                        padding-left: 1rem;
+                        cursor: pointer;
+                        background-image: url('../../assets/images/select_arrow_down.png');
+                        @include image-contain();
+                    }
+                    .title{
+                        font-size: 2rem;
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                    }
+                }
+                .add-section{
+                    width: 6rem;
+                    height: 6rem;
+                    background-image: url('../../assets/images/plus_box.png');
+                    @include image-contain();
+                    margin-left: 3rem;
+                    cursor: pointer;
+                }
+                .segment-body{
+                    display: flex;
+                }
+            }
+            .segment2{
+                padding-top: 2rem;
+                .segment-header{
+                    display: flex;
+                    width: 16rem;
+                    height: 2rem;
+                    align-items: center;
+                    padding-bottom: 1rem;
+                    .icon{
+                        width: 1rem;
+                        height: 1rem; 
+                        cursor: pointer;
+                        @include image-contain();
+                    }
+                    .dropdown-icon{
+                        width: 1rem;
+                        height: 1rem;
+                        padding-left: 1rem;
+                        cursor: pointer;
+                        background-image: url('../../assets/images/select_arrow_down.png');
+                        @include image-contain();
+                    }
+                    .title{
+                        font-size: 2rem;
+                        padding-right: 1rem;
+                        padding-left: 1rem;
+                    }
+                }
+                .add-section{
+                    width: 6rem;
+                    height: 6rem;
+                    background-image: url('../../assets/images/plus_box.png');
+                    @include image-contain();
+                    margin-left: 3rem;
+                    cursor: pointer;
+                }
+                .segment-body{
+                    display: flex;
+                    width:100%;
+                    .seg1, .seg2, .seg3, .seg4{
+                        width: 4rem;
+                        height: 4rem;
+                        padding: 1rem;
+                        display: flex;
+                    }
+                }
+            }
+        }
+    }
+}

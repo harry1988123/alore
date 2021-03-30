@@ -1,0 +1,22 @@
+<div class="main-content-container">
+    <div class="header">
+        <div class="title">Add a Segment</div>
+        <div class="close-icon" (click)="cancelClick($event)"></div>
+    </div>
+    <div class="body">
+        <mat-form-field appearance="fill" style="width: 21rem;" (ngSubmit)="onSubmitForm($event)" #segmentForm>
+            <div class="form-input-container">
+                <mat-label>Name*</mat-label>
+                <input matInput placeholder="Enter Segment Name" type="text" >
+                <mat-label>Icon</mat-label>
+                <emoji-mart title="Pick your emoji…" emoji="point_up" (emojiClick)="addEmoji($event)"></emoji-mart> 
+                <mat-label>Description</mat-label>
+                <textarea matInput></textarea>
+            </div>
+            <div class="button-section">
+                <button mat-button type="submit" class="submit-btn" color="primary" (click)="submitClick($event)">Submit</button>
+                <button mat-button type="button" color="primary" (click)="cancelClick($event)">Cancel</button>
+            </div>
+        </mat-form-field>
+    </div>
+</div>

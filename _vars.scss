@@ -1,0 +1,61 @@
+@mixin image-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+@mixin image-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+@mixin image-100 {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.align-items-center {
+    align-items: center!important;
+}
+
+.justify-content-between {
+    justify-content: space-between!important;
+}
+
+.justify-content-around {
+    justify-content: space-around!important;
+}
+
+.justify-content-start {
+    justify-content: flex-start!important;
+}
+
+.justify-content-end {
+    justify-content: flex-end!important;
+}
+
+.transition {
+    transition: all 0.2s ease-out;
+}
+
+@mixin align-v-h-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin align-v-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin align-h-center {
+    display: flex;
+    justify-content: center;
+}

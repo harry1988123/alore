@@ -1,0 +1,43 @@
+@import "../../../vars";
+.main-content-container{
+    width: 23rem;
+    height: auto;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    .header{
+        display: flex;
+        padding-bottom: 1rem;
+        justify-content: space-between;
+        .close-icon{
+            width: 1rem;
+            height: 1rem;
+            background-image: url("../../assets/images/cancel.png");
+            @include image-contain();
+            cursor: pointer;
+        }
+    }
+    .body{
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 3px solid #ccc;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            outline: none;
+        }
+        
+        input[type=text]:focus {
+            border: 3px solid #344cfc;
+        }
+
+        .circle { 
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+        }
+    }
+    
+}

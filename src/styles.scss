@@ -1,1 +1,413 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@ctrl/ngx-emoji-mart/picker';
+
+@font-face {
+    font-family: 'aeroportregular';
+    src: url('../src/assets/fonts/aeroport-webfont.woff2') format('woff2'), url('../src/assets/fonts/aeroport-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html,
+  body {
+    width: 100%;
+    min-width: 1280px;
+    height: 100%;
+    min-height: 600px;
+    margin: 0;
+    position: relative;
+    font-size: 16px !important;
+    font-family: "aeroportregular" !important;
+    line-height: 1;
+    background: #f1f1f1;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none !important;
+  }
+  
+  @media screen and (min-width: 1600px) {
+    html,
+    body {
+        font-size: 18px !important;
+    }
+  }
+  
+  @media screen and (min-width: 1920px) {
+    html,
+    body {
+        font-size: 20px !important;
+    }
+  }
+  
+  div,
+  span,
+  a,
+  input {
+    box-sizing: border-box;
+  }
+  
+  input {
+    width: 100%;
+    border: 1px solid #00B1EB;
+    border-radius: 4px;
+    height: 1.5rem;
+    outline: none;
+    padding: 0.1rem 0.5rem;
+  }
+  
+  .txt-center {
+    text-align: center;
+  }
+  
+  .bat-btn {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    border-radius: 4px;
+    margin: 0 0.5rem;
+    padding: .4rem 1.5rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  
+  .btn-ok {
+    background: linear-gradient(90deg, rgba(0, 177, 235, 1) 0.4%, rgba(0, 144, 209, 1) 36.97%, rgba(0, 79, 159, 1) 99.88%);
+    border-radius: 0.25rem;
+    border: 1px Solid #26A9E0;
+    color: #fff;
+  }
+  
+  .DN {
+      display: none !important;
+  }
+  
+  
+  /* Global popup
+  ...........................................*/
+  
+  .popup-background {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  
+  /* global dialog box customize */
+  
+  .mat-dialog-container {
+    border-radius: 18px !important;
+    padding: 0 !important;
+  }
+  
+  
+  /*perfect scroll custom css*/
+  
+  perfect-scrollbar {
+    width: 99% !important;
+  }
+  
+  .width-change {
+    width: 100% !important;
+  }
+  
+  .dark-blue-scroll {
+    .ps--active-x>.ps__rail-x,
+    .ps--active-y>.ps__rail-y {
+        background-color: #ededed;
+    }
+    .ps__rail-y {
+        opacity: 1;
+    }
+    .ps__thumb-y {
+        background-color: #00a9e9;
+    }
+    .ps__rail-y:hover>.ps__thumb-y,
+    .ps__rail-y:focus>.ps__thumb-y,
+    .ps__rail-y.ps--clicking .ps__thumb-y {
+        background-color: #00a9e9;
+        width: 6px;
+    }
+    .ps.ps--active-y>.ps__rail-y:hover,
+    .ps.ps--active-y>.ps__rail-y.ps--clicking {
+        width: 10px;
+    }
+    .ps__rail-x {
+        opacity: 1;
+    }
+    .ps.ps--active-x>.ps__rail-x {
+        height: 8px;
+    }
+    .ps__thumb-x {
+        background-color: #00a9e9;
+    }
+    .ps__rail-x:hover>.ps__thumb-x,
+    .ps__rail-x:focus>.ps__thumb-x,
+    .ps__rail-x.ps--clicking .ps__thumb-x {
+        background-color: #00a9e9;
+        height: 6px;
+    }
+    .ps.ps--active-x>.ps__rail-x:hover,
+    .ps.ps--active-x>.ps__rail-x.ps--clicking {
+        height: 8px;
+    }
+  }
+  
+  .light-blue-scroll {
+    .ps.ps--active-y>.ps__rail-y {
+        width: 3px;
+    }
+    .ps--active-x>.ps__rail-x,
+    .ps--active-y>.ps__rail-y {
+        background-color: #fffffb;
+    }
+    .ps__rail-y {
+        opacity: 1;
+    }
+    .ps__thumb-y {
+        background-color: #09c2f8;
+        width: 3px;
+        right: 0px;
+    }
+    .ps__rail-y:hover>.ps__thumb-y,
+    .ps__rail-y:focus>.ps__thumb-y,
+    .ps__rail-y.ps--clicking .ps__thumb-y {
+        background-color: #09c2f8;
+        width: 3px;
+    }
+    .ps.ps--active-y>.ps__rail-y:hover,
+    .ps.ps--active-y>.ps__rail-y.ps--clicking {
+        width: 3px;
+    }
+    .ps__rail-x {
+        opacity: 1;
+    }
+    .ps.ps--active-x>.ps__rail-x {
+        height: 3px;
+    }
+    .ps__thumb-x {
+        background-color: #09c2f8;
+    }
+    .ps__rail-x:hover>.ps__thumb-x,
+    .ps__rail-x:focus>.ps__thumb-x,
+    .ps__rail-x.ps--clicking .ps__thumb-x {
+        background-color: #09c2f8;
+        height: 3px;
+    }
+    .ps.ps--active-x>.ps__rail-x:hover,
+    .ps.ps--active-x>.ps__rail-x.ps--clicking {
+        height: 3px;
+    }
+  }
+  
+  #comparision-summary,
+  #comparision-table-view,
+  #chart-table-container {
+      perfect-scrollbar {
+          width: 100% !important;
+      }
+  }
+  
+  #penaltytableview{
+       .ps-content{
+          display: flex;
+      }
+  }
+  
+  
+  /*Start of highcharts styling*/
+  
+  .name {
+    position: relative;
+    top: -2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.625rem;
+    color: #000000;
+    @media screen and (min-width: 1280px) {
+        top: -1.8rem;
+    }
+    @media screen and (min-width: 1366px) {
+        top: -2rem;
+    }
+  }
+  
+  .value-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .value, .grey-value, .green-value, .red-value {
+        width: 2.3rem;
+        height: 1.2rem;
+        // background: #C94747;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.125rem;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        // margin: 0.3rem 0;
+        margin: 0.3rem 0;
+    }
+    .grey-value {
+      background: rgb(181, 181, 181);
+    }
+    .green-value {
+      background: #459B6C;
+    }
+    .red-value {
+      background: #C94747;
+    }
+  
+    .p-value, .g-value, .n-value {
+        width: 2.3rem;
+        height: 1.2rem;
+        // background: #C94747;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.125rem;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+        //margin: 0.3rem 0;
+    }
+  
+    .p-value {
+      background: #459B6C;
+    }
+    .g-value {
+      background: rgb(181, 181, 181);
+    }
+    .n-value {
+      background: #C94747;
+    }
+  }
+  
+  .highcharts-stack-labels {
+    top: -0.2rem !important
+  }
+  
+  .highcharts-xaxis path {
+    stroke-width: 0;
+  }
+  
+  .rectangle {
+    width: 4rem;
+    height: 1.6rem;
+    border-radius: 5px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &.red {
+        background-color: rgb(210, 43, 54);
+        border-bottom: 2px solid rgb(149, 15, 18);
+        &.top {
+            border-top: 2px solid rgb(149, 15, 18);
+            border-bottom: none;
+        }
+    }
+    &.green {
+        background-color: rgb(0, 133, 122);
+        border-bottom: 2px solid rgb(0, 65, 51);
+        &.top {
+            border-top: 2px solid rgb(0, 65, 51);
+            border-bottom: none;
+        }
+    }
+    &.grey {
+        background-color: rgb(181, 181, 181);
+        border-bottom: 2px solid rgb(122, 122, 122);
+        &.top {
+            border-top: 2px solid rgb(122, 122, 122);
+            border-bottom: none;
+        }
+    }
+  }
+  
+  .oval {
+    width: 4rem;
+    height: 1.6rem;
+    border-radius: 15px;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &.red {
+        background-color: rgb(210, 43, 54);
+        border-bottom: 2px solid rgb(149, 15, 18);
+        &.top {
+            border-top: 2px solid rgb(149, 15, 18);
+            border-bottom: none;
+        }
+    }
+    &.green {
+        background-color: rgb(0, 133, 122);
+        border-bottom: 2px solid rgb(0, 65, 51);
+        &.top {
+            border-top: 2px solid rgb(0, 65, 51);
+            border-bottom: none;
+        }
+    }
+    &.grey {
+        background-color: rgb(181, 181, 181);
+        border-bottom: 2px solid rgb(122, 122, 122);
+        &.top {
+            border-top: 2px solid rgb(122, 122, 122);
+            border-bottom: none;
+        }
+    }
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: 1.6rem;
+    &.red {
+        border-top: 7px solid rgb(210, 43, 54);
+    }
+    &.green {
+        border-top: 7px solid rgb(0, 133, 122)
+    }
+    &.grey {
+        border-top: 7px solid rgb(181, 181, 181)
+    }
+  }
+  
+  .triangle-top {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -7px;
+    left: 1.6rem;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    &.red {
+        border-bottom: 7px solid rgb(210, 43, 54);
+    }
+    &.green {
+        border-bottom: 7px solid rgb(0, 133, 122)
+    }
+    &.grey {
+        border-bottom: 7px solid rgb(181, 181, 181)
+    }
+  }
+  
+  
+  /*End of highcharts styling*/
+  
+  
+  /* Importing Bootstrap SCSS file. */
+   
+  
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

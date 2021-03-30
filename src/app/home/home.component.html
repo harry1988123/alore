@@ -1,0 +1,62 @@
+<div class="main-content-container">
+    <div class="left-panel">
+        <div class="header-title">Prospector</div>
+        <div class="search-container">
+            <div class="input-field">
+                <input type="text" placeholder="Search for a table or a segment" (search)="clearFilterText($event)" [(ngModel)]="filterText" class="input-box" (keyup)="filterGroup($event)">
+            </div>
+        </div>
+        <div class="segment-section">
+            <div class="segement-header-title">SEGMENTS</div>
+            <ng-container *ngFor='let item of seg.segmentListOne'>
+                <div class="list-item segment1">
+                    <div class="icon">{{item.emoji}}</div> 
+                    <div class="title">{{item.segmentName}}</div>
+                </div>
+            </ng-container>
+        </div>
+        <div class="footer" mat-button color='primary'(click)="addSegmentClick($event)">
+            <div class="add-segment">
+                <div class="plus-icon"></div> 
+                <div class="title">Add a segment</div>
+            </div>
+        </div>
+    </div>
+    <div class="body"> 
+        <div class="segment-container">
+            <div class="segment1">
+                <div class="segment-header">
+                    <div class="icon">😕</div>
+                    <div class="title">Segment 1</div>
+                    <div class="dropdown-icon"></div>
+                </div>
+                <div class="add-section"></div>
+            </div>
+            <div class="segment2">
+                <div class="segment-header">
+                    <div class="icon">😕</div>
+                    <div class="title">Segment 2</div>
+                    <div class="dropdown-icon"></div>
+                </div>
+                <div class="segment-body">
+                    <div class="seg1">
+                        <div class="image-icon">🤓</div>
+                        <div class="title">Seg1</div>
+                    </div>
+                    <div class="seg2">
+                        <div class="image-icon">😁</div>
+                        <div class="title">Seg2</div>
+                    </div>
+                    <div class="seg3">
+                        <div class="image-icon">😁</div>
+                        <div class="title">Seg3</div>
+                    </div><div class="seg4">
+                        <div class="image-icon">🤪</div>
+                        <div class="title">Seg4</div>
+                    </div>
+                    <div class="add-section" (click)="addSegmentClick2($event)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
